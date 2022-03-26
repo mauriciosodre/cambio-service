@@ -21,12 +21,14 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-
   flyway:
     url: jdbc:mysql://localhost:3306/
     schemas: cambio_service
     user: root
     password: root
+  sleuth:
+    sampler:
+      probability: 1.0 #1.0 = 100% de cobertura de logs. Utilizar somente para testes. Em prod reduzir para próximo de 0.05
 
 springdoc:
   api-docs:
